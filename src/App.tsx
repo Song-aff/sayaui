@@ -1,49 +1,14 @@
-import React, { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
-interface Inumber {
-  [key: number]: number
-}
-const a: Inumber = {
-  1: 124,
-}
-
+import React from 'react'
+import './App.scss'
 const App: React.FC = () => {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type='button' onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className='App-link'
-            href='https://reactjs.org'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className='App-link'
-            href='https://vitejs.dev/guide/features.html'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div>
+      <h1>hello world</h1>
+      <h2>hello world</h2>
+      <h3>hello world</h3>
+      <code>const a=1</code>
+      <a href='baidu.com'>link</a>
+      <p>10086</p>
     </div>
   )
 }
