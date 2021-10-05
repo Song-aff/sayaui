@@ -1,15 +1,41 @@
 import React from 'react'
 import './App.scss'
+import Button, { ButtonSize, ButtonType } from './components/Button/button'
 const App: React.FC = () => {
   return (
-    <div>
-      <h1>hello world</h1>
-      <h2>hello world</h2>
-      <h3>hello world</h3>
-      <code>const a=1</code>
-      <a href='baidu.com'>link</a>
-      <p>10086</p>
-    </div>
+    <>
+      <Button
+        autoFocus={true}
+        btnType={ButtonType.Primary}
+        size={ButtonSize.large}
+      >
+        Hello
+      </Button>
+      <Button btnType={ButtonType.Danger} size={ButtonSize.Small}>
+        Hello
+      </Button>
+      <Button btnType={ButtonType.Default} size={ButtonSize.large}>
+        Hello
+      </Button>
+      <Button size={ButtonSize.large} disabled={true}>
+        World
+      </Button>
+      <Button
+        target='_blank'
+        btnType={ButtonType.Link}
+        href={'http://www.baidu.com'}
+      >
+        Baidu Link
+      </Button>
+      <Button
+        target='_blank'
+        btnType={ButtonType.Link}
+        disabled={true}
+        href={'http://www.baidu.com'}
+      >
+        Baidu Link
+      </Button>
+    </>
   )
 }
 
