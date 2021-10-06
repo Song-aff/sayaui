@@ -1,14 +1,14 @@
 import React from 'react'
 import classNames from 'classnames'
-export enum ButtonSize {
-  large = 'lg',
-  Small = 'sm',
-}
 export enum ButtonType {
   Primary = 'primary',
   Default = 'default',
   Danger = 'danger',
   Link = 'link',
+}
+export enum ButtonSize {
+  large = 'lg',
+  Small = 'sm',
 }
 interface BaseButtonProps {
   className?: string
