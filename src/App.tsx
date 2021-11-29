@@ -3,27 +3,40 @@ import './App.scss'
 import Button, { ButtonSize, ButtonType } from './components/Button/button'
 import MenuItem from './components/Menu/menuItem'
 import Menu from './components/Menu/menu'
+import SubMenu from './components/Menu/subMenu'
 const App: React.FC = () => {
   return (
     <>
       <Menu
-        defaultIndex={2}
+        defaultIndex='0'
         onSelect={(index) => {
-          alert(index)
+          console.log(index)
         }}
       >
-        <MenuItem index={0}>123</MenuItem>
-        <MenuItem index={1} disabled>
-          456
-        </MenuItem>
-        <MenuItem index={2}>789</MenuItem>
+        <MenuItem>cool link</MenuItem>
+        <MenuItem disabled>disabled</MenuItem>
+        <MenuItem>cool link 2</MenuItem>
+        <SubMenu title='123'>
+          <MenuItem>aa</MenuItem>
+          <MenuItem>aa</MenuItem>
+          <MenuItem>aa</MenuItem>
+          <MenuItem>aa</MenuItem>
+          <MenuItem>aa</MenuItem>
+        </SubMenu>
       </Menu>
-      <Menu defaultIndex={2} mode={'vertical'}>
-        <MenuItem index={0}>123</MenuItem>
-        <MenuItem index={1} disabled>
-          456
-        </MenuItem>
-        <MenuItem index={2}>789</MenuItem>
+      <Menu defaultIndex={'2'} mode={'vertical'}>
+        <MenuItem>123</MenuItem>
+        <MenuItem disabled>456</MenuItem>
+        <MenuItem>789</MenuItem>
+        <MenuItem>789</MenuItem>
+        <SubMenu title='123'>
+          <MenuItem>aa</MenuItem>
+          <MenuItem>aa</MenuItem>
+          <MenuItem>aa</MenuItem>
+          <MenuItem>aa</MenuItem>
+          <MenuItem>aa</MenuItem>
+        </SubMenu>
+        <MenuItem>789</MenuItem>
       </Menu>
       <hr></hr>
       <Button

@@ -13,12 +13,12 @@ import MenuItem, { MenuItemProps } from './menuItem'
 //增加dom类断言
 import '@testing-library/jest-dom/extend-expect'
 const testProps: MenuProps = {
-  defaultIndex: 0,
+  defaultIndex: '0',
   onSelect: jest.fn(),
   className: 'test',
 }
 const testVerProps: MenuProps = {
-  defaultIndex: 0,
+  defaultIndex: '0',
   mode: 'vertical',
 }
 const generateMenu = (props: MenuProps) => {
