@@ -1,9 +1,31 @@
 import React from 'react'
 import './App.scss'
 import Button, { ButtonSize, ButtonType } from './components/Button/button'
+import MenuItem from './components/Menu/menuItem'
+import Menu from './components/Menu/menu'
 const App: React.FC = () => {
   return (
     <>
+      <Menu
+        defaultIndex={2}
+        onSelect={(index) => {
+          alert(index)
+        }}
+      >
+        <MenuItem index={0}>123</MenuItem>
+        <MenuItem index={1} disabled>
+          456
+        </MenuItem>
+        <MenuItem index={2}>789</MenuItem>
+      </Menu>
+      <Menu defaultIndex={2} mode={'vertical'}>
+        <MenuItem index={0}>123</MenuItem>
+        <MenuItem index={1} disabled>
+          456
+        </MenuItem>
+        <MenuItem index={2}>789</MenuItem>
+      </Menu>
+      <hr></hr>
       <Button
         autoFocus={true}
         btnType={ButtonType.Primary}
